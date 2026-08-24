@@ -1,7 +1,6 @@
 {
   "name": "@marlonoirah/auth-react",
   "version": "0.0.0",
-  "private": true,
   "description": "Headless, theme-independent React authentication components and hooks",
   "keywords": ["react", "auth", "authentication", "rbac", "hooks", "components", "better-auth"],
   "license": "MIT",

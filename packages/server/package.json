@@ -1,7 +1,6 @@
 {
   "name": "@marlonoirah/auth-server",
   "version": "0.0.0",
-  "private": true,
   "description": "Server-side authentication facade over Better Auth with framework adapters",
   "keywords": ["auth", "authentication", "authorization", "rbac", "better-auth", "fastify", "drizzle"],
   "license": "MIT",
