@@ -1,8 +1,16 @@
 {
   "name": "@marlonoirah/auth-react",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Headless, theme-independent React authentication components and hooks",
-  "keywords": ["react", "auth", "authentication", "rbac", "hooks", "components", "better-auth"],
+  "keywords": [
+    "react",
+    "auth",
+    "authentication",
+    "rbac",
+    "hooks",
+    "components",
+    "better-auth"
+  ],
   "license": "MIT",
   "author": {
     "name": "Marlon Hario"
@@ -32,7 +40,9 @@
       "require": "./dist/server.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "test": "vitest run --passWithNoTests",

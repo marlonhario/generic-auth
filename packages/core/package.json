@@ -1,8 +1,15 @@
 {
   "name": "@marlonoirah/auth-core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Shared TypeScript contracts, validation schemas, and error codes for the auth library",
-  "keywords": ["auth", "authentication", "authorization", "rbac", "better-auth", "typescript"],
+  "keywords": [
+    "auth",
+    "authentication",
+    "authorization",
+    "rbac",
+    "better-auth",
+    "typescript"
+  ],
   "license": "MIT",
   "author": {
     "name": "Marlon Hario"
@@ -27,7 +34,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "test": "vitest run --passWithNoTests",
