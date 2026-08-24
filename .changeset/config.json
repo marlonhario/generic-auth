@@ -1,0 +1,11 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
+  "changelog": ["@changesets/changelog-github", { "repo": "marlonoirah/generic-auth" }],
+  "commit": false,
+  "fixed": [["@marlonoirah/auth-core", "@marlonoirah/auth-server", "@marlonoirah/auth-client", "@marlonoirah/auth-react"]],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependents": "always",
+  "ignore": ["@marlonoirah/example-basic"]
+}

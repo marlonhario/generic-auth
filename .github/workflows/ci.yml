@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: auth_test
+        ports:
+          - 5544:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d auth_test"
+          --health-interval 2s
+          --health-timeout 3s
+          --health-retries 15
+
+    env:
+      AUTH_TEST_PG_URL: postgres://postgres:postgres@127.0.0.1:5544/auth_test
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      # Unit + memory-adapter suites; the env-gated org E2E skips here.
+      - name: Test
+        run: pnpm test
+
+      # PostgreSQL-gated organization E2E — invoked directly because turbo
+      # does not hash arbitrary env vars into its task cache. The suite
+      # self-provisions its schema from CLI-generated DDL.
+      - name: Integration tests (PostgreSQL)
+        run:
+          pnpm --filter @marlonoirah/auth-server exec vitest run
+          tests/integration-org.test.ts

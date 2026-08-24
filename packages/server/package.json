@@ -1,0 +1,47 @@
+{
+  "name": "@marlonoirah/auth-server",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Server-side authentication facade over Better Auth with framework adapters",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "auth-cli": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@marlonoirah/auth-core": "workspace:*",
+    "better-auth": "1.7.1",
+    "drizzle-orm": "^0.45.2",
+    "kysely": "^0.28.8",
+    "zod": "^4.3.6"
+  },
+  "peerDependencies": {
+    "fastify": ">=4 <6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "fastify": "^5.6.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4",
+    "pg": "^8.16.3",
+    "@types/pg": "^8.15.6"
+  }
+}
