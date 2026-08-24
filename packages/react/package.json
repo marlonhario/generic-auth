@@ -3,6 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "description": "Headless, theme-independent React authentication components and hooks",
+  "keywords": ["react", "auth", "authentication", "rbac", "hooks", "components", "better-auth"],
+  "license": "MIT",
+  "author": {
+    "name": "Marlon Hario"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlonhario/generic-auth.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/marlonhario/generic-auth#readme",
+  "bugs": {
+    "url": "https://github.com/marlonhario/generic-auth/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

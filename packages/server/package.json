@@ -3,6 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "description": "Server-side authentication facade over Better Auth with framework adapters",
+  "keywords": ["auth", "authentication", "authorization", "rbac", "better-auth", "fastify", "drizzle"],
+  "license": "MIT",
+  "author": {
+    "name": "Marlon Hario"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlonhario/generic-auth.git",
+    "directory": "packages/server"
+  },
+  "homepage": "https://github.com/marlonhario/generic-auth#readme",
+  "bugs": {
+    "url": "https://github.com/marlonhario/generic-auth/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

@@ -3,6 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "description": "Shared TypeScript contracts, validation schemas, and error codes for the auth library",
+  "keywords": ["auth", "authentication", "authorization", "rbac", "better-auth", "typescript"],
+  "license": "MIT",
+  "author": {
+    "name": "Marlon Hario"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlonhario/generic-auth.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/marlonhario/generic-auth#readme",
+  "bugs": {
+    "url": "https://github.com/marlonhario/generic-auth/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

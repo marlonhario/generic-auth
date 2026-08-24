@@ -3,6 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "description": "Framework-independent authentication client wrapping Better Auth client",
+  "keywords": ["auth", "client", "authentication", "better-auth"],
+  "license": "MIT",
+  "author": {
+    "name": "Marlon Hario"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlonhario/generic-auth.git",
+    "directory": "packages/client"
+  },
+  "homepage": "https://github.com/marlonhario/generic-auth#readme",
+  "bugs": {
+    "url": "https://github.com/marlonhario/generic-auth/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
