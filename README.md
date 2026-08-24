@@ -20,8 +20,18 @@ Reusable, application-agnostic authentication and authorization built on
 Integration coverage runs a real Better Auth instance against an in-memory
 adapter through the facade.
 
-> ⛔ **Publishing is blocked.** All packages are marked `private`. Nothing is published to
-> npm until the first release is explicitly approved by the project owner.
+> ✅ **Published.** All four packages are live on npm (`0.1.0`, MIT). Releases
+> are fully automated via [changesets](https://github.com/changesets/changesets):
+> push a changeset, merge the auto-opened **Version Packages** PR, and CI builds,
+> publishes, tags, and creates GitHub releases.
+
+## Installation
+
+```bash
+pnpm add @marlonoirah/auth-core @marlonoirah/auth-server   # server
+pnpm add @marlonoirah/auth-client                          # any JS client
+pnpm add @marlonoirah/auth-react                           # React apps
+```
 
 ## Quickstart
 

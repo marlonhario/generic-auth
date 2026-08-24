@@ -4,7 +4,8 @@
 `@marlonoirah/auth-react`
 **Supersedes:** the original "AI Implementation Instructions" draft (decisions folded in below)
 **Decision records:** [`docs/adr/`](./adr/) — ADR-0001 … ADR-0006
-**Publishing:** blocked until the first release is explicitly approved.
+**Publishing:** approved — first release `0.1.0` shipped via changesets + the
+`release.yml` workflow; subsequent releases flow through Version Packages PRs.
 
 ---
 

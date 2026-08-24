@@ -6,8 +6,10 @@ Guidance for coding agents working in this repository.
 
 pnpm + turbo monorepo (`packages/*`, `examples/*`). Library scope:
 `@marlonoirah/auth-*` — authentication + RBAC facade over **Better Auth
-`1.7.1` (pinned exact, ADR-0005)**. All packages are `private`; publishing is
-blocked until explicitly approved.
+`1.7.1` (pinned exact, ADR-0005)**. Packages are published to npm under the
+`marlonoirah` org; releases are automated via changesets — add a changeset,
+then merge the bot-opened **Version Packages** PR (`release.yml` publishes,
+tags, and creates GitHub releases). Never publish manually.
 
 ## Commands (all run from the repo root)
 
